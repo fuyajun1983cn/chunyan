@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h2 style="line-height: 3; font-size: 1.7rem;">最近文章列表</h2>
+          <div class="news-list">
+          
+          {% for post in site.posts %}
+          {% if forloop.index <= 4 %}
+              <div class="news-item">
+                <div class="decoration">
+                  <div class="news-circle">
+                    <div class="solid-circle"></div>
+                  </div>
+                </div>
+                <div class="news-box">
+                  <a href="{{post.url}}" class="news-title">{{post.title}}</a>
+                  <div class="news-time">
+                    {{ post.date | date: "%B %e, %Y"}}
+                  </div>
+                </div>
+              </div>
+              {% else  %}
+                <br>
+                <a class="btn btn-primary btn-sm" href="#" role="button">更多文章</a>
+         {% endif %}
+         {% endfor %}
+             
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12">
+          <div class="jumbotron">
+            <h1>欢迎访问！</h1>
+            <p>本站会分享一些基本药学知识，以及生活，饮食，健康方面的一些科普知识。</p>
+            <p><a class="btn btn-primary btn-lg" href="/about/" role="button">了解详情</a></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+    </div><!-- /.container -->
+
+   
+
+
+    {% include footer.html %}
+</body>
+
+</html>

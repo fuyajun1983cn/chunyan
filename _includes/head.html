@@ -1,0 +1,165 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>{{site.title}}</title>
+
+  <!-- Bootstrap -->
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    .news-list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    }
+
+    .news-item {
+    display: table-row;
+    width: 100%;
+    }
+
+    .decoration:before,
+    .decoration:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    }
+
+    .news-item:nth-child(1) .decoration:before {
+    display: none;
+    }
+
+    .news-item:nth-last-child(1) .decoration:after {
+    display: none;
+    }
+
+    .decoration:before {
+    top: 0;
+    }
+
+    .decoration:after {
+    bottom: 0;
+    }
+
+    .decoration {
+    display: table-cell;
+    width: 10%;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    }
+
+    .news-item:hover .news-box {
+    background-color: #64b7f7;
+    color: #fff;
+    }
+
+    .news-item:hover .news-box:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #64b7f7;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    }
+
+    .news-item:hover .solid-circle {
+    background: #64b7f7;
+    }
+
+    .news-item .news-title {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+
+    .news-item:hover .news-title {
+    color: #fff;
+    text-decoration: underline;
+    }
+
+    .news-item:hover .news-time {
+    color: #fff;
+    }
+
+    .news-box {
+    display: table-cell;
+    line-height: 3rem;
+    width: 80%;
+    vertical-align: middle;
+    color: #000;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 2px;
+    }
+
+    .news-circle {
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    vertical-align: middle;
+    }
+
+    .solid-circle {
+    background: #ccc;
+    border-radius: 50%;
+    width: 0.6rem;
+    height: 0.6rem;
+    overflow: hidden;
+    margin: 0.3rem;
+    }
+
+    .more-news {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    }
+
+    .more-news-tip {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2;
+    padding-right: 3em;
+    color: #000;
+    background: url(../img/gray_right.png) right 1em center/ auto 100% no-repeat;
+    }
+
+    .more-news-tip:hover {
+    background-image: url(../img/gray_right_01.png);
+    }
+
+    .news-time {
+    color: #999999;
+    font-size: 1rem;
+    line-height: 2rem;
+    }
+
+    .more-news-img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.2rem;
+    padding-left: 0.5rem;
+    }
+  </style>
+</head>
+
+
