@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <p>
+     <h1>test: 
+	 
+	 {% capture my_variable %}site.10000_number{% endcapture %}
+{{ my_variable }}
+	 </h1>
+	</p>
+
+
+    {% include footer.html %}
+</body>
+
+</html>
